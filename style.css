@@ -1,0 +1,147 @@
+:root {
+    --strongBlue: hsl(234, 29%, 20%);
+    --CharcoalGrey : hsl(235, 18%, 26%);
+    --Grey : hsl(231, 7%, 60%);
+    --White : hsl(0, 0%, 100%);
+    --Tomato : hsl(4, 100%, 67%)
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+img {
+    max-width: 100%;
+}
+body {
+    background-color: var(--strongBlue);
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+.submit {
+    &:hover {
+        background-color: var(--Tomato);
+        border-color: var(--Tomato);
+    }
+    background-color: var(--strongBlue);
+    color: var(--White);
+    padding: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 17px;
+    border: 1px solid var(--strongBlue);
+}
+#form-start {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    justify-content: center;
+    color: var(--strongBlue);
+    align-items: center;
+    display: flex;
+    gap: 0 30px;
+    }
+    p {
+        margin: 20px 0;
+    }
+    h2 {
+        font-size: 45px;
+    }
+    .left {
+        flex-direction: column;
+        padding: 30px;
+        display: flex;
+        .list-item {
+            margin: 20px 0;
+        }
+        .item {
+            align-items: center;
+            gap: 0 12px;
+            display: flex;
+        }
+    }
+    .form-control {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .emailInput {
+            padding: 15px ;
+            border-radius: 4px;
+            border: 1px solid lightgray;
+            font-size: 18px;
+            outline: none;
+        }
+        .top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .errorMessage {
+                color: var(--Tomato);
+                font-weight: 500;
+            }
+        }
+        .error {
+            border: 1px solid var(--Tomato);
+            color: var(--Tomato);
+            background-color: rgba(255,0,0,0.1) !important;
+            &::placeholder {
+                color: var(--Tomato);
+            }
+                
+        }
+       
+    }
+#form-success {
+    background-color: white;
+    padding: 50px;
+    border-radius: 20px;
+    color: var(--strongBlue);
+    form {
+        width: 350px;
+        gap: 25px;
+        display: flex;
+        flex-direction: column;
+        .logo {
+            width: 50px;        
+        }
+        .title {
+            font-size: 40px;
+            font-weight: 600;
+        }
+    }
+}
+.hidden {
+    display: none !important;
+}
+@media only screen and (max-width:800px) {
+    #form-start {
+        flex-direction: column-reverse;
+        padding: 0px;
+        border-radius: 0px;
+    }
+    #form-success {
+        padding: 20px;
+        border-radius: 0px;
+        height: 100%;
+        form {
+         display: flex;
+            height: 100%;
+            flex-direction: column;
+            justify-content: space-around;
+            .infor {
+                .title {
+                    font-size: 30px;
+                }
+            }
+        } 
+    
+       
+       
+        
+    }
+ }
